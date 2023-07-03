@@ -75,11 +75,7 @@ class _BottomNavStyle8State extends State<BottomNavStyle8>
                 ),
                 item.title == null
                     ? SizedBox.shrink()
-                    : AnimatedBuilder(
-                        animation: _animationList[itemIndex],
-                        builder: (context, child) => Transform.scale(
-                          scale: _animationList[itemIndex].value,
-                          child: Material(
+                    : Material(
                             type: MaterialType.transparency,
                             child: FittedBox(
                               child: Text(
@@ -102,8 +98,6 @@ class _BottomNavStyle8State extends State<BottomNavStyle8>
                               ),
                             ),
                           ),
-                        ),
-                      )
               ],
             ),
           );
